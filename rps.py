@@ -284,8 +284,58 @@ def is_round_winner(move, oppent_move):
         or (move == SCISSORS and opponent_move == PAPER)
         or (move == PAPER and opponent_move == ROCK)
     )
-    
 
+def announce_round_winner(winner_name):
+    if winner_name == "":
+        print("This round is a draw!")
+    else: 
+        print("{winner_name} wins the round!")
+
+def do_round(p1_name, p2_name):
+    move1 = get_move(p1_name)
+    move2 = get_move(p2_name)
+
+    if move1.lower() == move2.lower():
+        return DRAW
+    elif is_round_winner(move1, move2):
+        return PLAYER_1
+    else: 
+        return PLAYER_2
+
+def announce_winner(winner_name):
+    if winner_name == "":
+        print("No winner!")
+          else:
+        print(f"Congratulations {winner_name}!")
+        print(f"You won {COURSE_NAME} Rock, Paper, Scissors!")
+
+
+def do_game(p1_name, p2_name, game_type):
+    """Plays three rounds and returns the overall winner's name."""
+    if game_type == PLAY_RPSLS:
+        print("Under Construction")
+        return ""
+
+    p1_wins = 0
+    p2_wins = 0
+
+    for _ in range(MAX_ROUNDS):
+        result = do_round(p1_name, p2_name)
+
+        if result == PLAYER_1:
+            p1_wins += 1
+            announce_round_winner(p1_name)
+        elif result == PLAYER_2:
+            p2_wins += 1
+            announce_round_winner(p2_name)
+        else:
+            announce_round_winner("")
+
+    if p1_wins > p2_wins:
+        return p1_name
+    elif p2_wins > p1_wins:
+        return p2_name
+    else:
 
 
 
