@@ -336,6 +336,7 @@ def do_game(p1_name, p2_name, game_type):
     elif p2_wins > p1_wins:
         return p2_name
     else:
+        rerturn ""
 
 
 
