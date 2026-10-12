@@ -4,7 +4,7 @@ rps.py
 Redistributed and modified with permission from the
 EECS Department at The University of Michigan, Ann Arbor
 
-Name: TO FILL IN (your name)
+Name: Cameron Richardson
 
 CS 104: Project 2
 FALL 2026
