@@ -245,10 +245,51 @@ def get_name(player_number):
     name = input("Player {player_number}, enter yourt name: ")
 
     if name == "":
-        print 
+        print_error_message(EROOR_NAME)
+        if player_number == PLAYER_1:
+            return DEFAULT_NAME_1
+        return DEFAULT_NAME_2
 
-    # NOTE: replace this return statement!!!
-    return True
+    return name
+
+def get_menu_choice():
+     while true
+        print_menu()
+        choice = input("Choice -- ")
+
+        if choice == str(PLAY_RPS):
+            return PLAY_RPS
+        elif choice == str(PLAY_RPSLS):
+            return PLAY_RPSLS
+        elif choice == str(QUIT_CHOICE):
+            return QUIT_CHOICE
+        else:
+            print("Invalid menu choice")
+
+def get_move(player_name)
+    move = input("{player_name}, enter your move: ")
+
+    if is_move_good(move):
+        return move
+    else:
+        print_error_message(ERROR_MOVE)
+        return DEFAULT_MOVE
+
+def is_round_winner(move, oppent_move):
+    move = move.lower()
+    oppenent_move = oppenent_move.lower()
+
+    return (
+        (move == ROCK and opponent_move == SCISSORS)
+        or (move == SCISSORS and opponent_move == PAPER)
+        or (move == PAPER and opponent_move == ROCK)
+    )
+    
+
+
+
+
+
 
 
 # ***********************************************************************
