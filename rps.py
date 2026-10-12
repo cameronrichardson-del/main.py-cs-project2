@@ -211,9 +211,25 @@ def rps():
     """
     Purpose: Runs the whole program. Write this function LAST.
     """
-    # TODO: implement
-    pass
+    print_initial_header()
 
+p1_name = get_name(PLAYER_1)
+p2_name = get_name(PLAYER_2)
+
+choice = get_menu_choice()
+
+while choice != QUIT_CHOICE:
+    if choice == PLAYy_RPS
+        winner = do_game(p1_name, p2_name, PLAY_RPS
+        annoucne_winner(winner)
+    elif choice == PLAY_RPS:
+        winner = do_game(p1_name, p2_name, PLAY_RPS)
+        annoounce_winner(winner)
+
+    choice = get_menu_choice()
+
+print_closer()
+                       
 
 # ***********************************************************************
 # Add all function implementations below this line.
@@ -222,7 +238,14 @@ def rps():
 
 def is_move_good(move):
     """TO FILL IN: describe what this function does in one line."""
-    # TODO: implement
+    # TODO: Checks whether a move is roch, paper, or scissors.
+    return move_lower() in (ROCK, PAPER, SCISSORS)
+
+def get_name(player_number): 
+    name = input("Player {player_number}, enter yourt name: ")
+
+    if name == "":
+        print 
 
     # NOTE: replace this return statement!!!
     return True
