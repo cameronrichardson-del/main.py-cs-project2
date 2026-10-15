@@ -209,27 +209,27 @@ QUIT_CHOICE = 3
 
 def rps():
     """
-    Purpose: Runs the whole program. Write this function LAST.
+    Purpose: Runs the whole program.
     """
     print_initial_header()
 
-p1_name = get_name(PLAYER_1)
-p2_name = get_name(PLAYER_2)
-
-choice = get_menu_choice()
-
-while choice != QUIT_CHOICE:
-    if choice == PLAYy_RPS
-        winner = do_game(p1_name, p2_name, PLAY_RPS
-        annoucne_winner(winner)
-    elif choice == PLAY_RPS:
-        winner = do_game(p1_name, p2_name, PLAY_RPS)
-        annoounce_winner(winner)
+    p1_name = get_name(PLAYER_1)
+    p2_name = get_name(PLAYER_2)
 
     choice = get_menu_choice()
 
-print_closer()
-                       
+    while choice != QUIT_CHOICE:
+        if choice == PLAY_RPS:
+            winner = do_game(p1_name, p2_name, PLAY_RPS)
+            announce_winner(winner)
+
+        elif choice == PLAY_RPSLS:
+            winner = do_game(p1_name, p2_name, PLAY_RPSLS)
+            announce_winner(winner)
+
+        choice = get_menu_choice()
+
+    print_closer()
 
 # ***********************************************************************
 # Add all function implementations below this line.
