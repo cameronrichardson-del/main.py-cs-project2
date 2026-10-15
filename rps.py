@@ -272,9 +272,9 @@ def get_move(player_name)
         print_error_message(ERROR_MOVE)
         return DEFAULT_MOVE
 
-def is_round_winner(move, oppent_move):
+def is_round_winner(move, opponent_move):
     move = move.lower()
-    oppenent_move = oppenent_move.lower()
+    opponent_move = opponent_move.lower()
 
     return (
         (move == ROCK and opponent_move == SCISSORS)
@@ -282,11 +282,13 @@ def is_round_winner(move, oppent_move):
         or (move == PAPER and opponent_move == ROCK)
     )
 
+
 def announce_round_winner(winner_name):
     if winner_name == "":
         print("This round is a draw!")
-    else: 
-        print("{winner_name} wins the round!")
+    else:
+        print(f"{winner_name} wins the round!")
+
 
 def do_round(p1_name, p2_name):
     move1 = get_move(p1_name)
@@ -296,13 +298,14 @@ def do_round(p1_name, p2_name):
         return DRAW
     elif is_round_winner(move1, move2):
         return PLAYER_1
-    else: 
+    else:
         return PLAYER_2
+
 
 def announce_winner(winner_name):
     if winner_name == "":
         print("No winner!")
-          else:
+    else:
         print(f"Congratulations {winner_name}!")
         print(f"You won {COURSE_NAME} Rock, Paper, Scissors!")
 
@@ -333,8 +336,7 @@ def do_game(p1_name, p2_name, game_type):
     elif p2_wins > p1_wins:
         return p2_name
     else:
-        rerturn ""
-
+        return ""
 
 
 
