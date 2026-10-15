@@ -237,21 +237,18 @@ def rps():
 # ***********************************************************************
 
 def is_move_good(move):
-    """TO FILL IN: describe what this function does in one line."""
-    # TODO: Checks whether a move is roch, paper, or scissors.
-    return move_lower() in (ROCK, PAPER, SCISSORS)
+    """Checks whether a move is rock, paper, or scissors."""
+    return move.lower() in (ROCK, PAPER, SCISSORS)
 
-def get_name(player_number): 
-    name = input("Player {player_number}, enter yourt name: ")
+
+def get_name(player_number):
+    name = input(f"Player {player_number}, enter your name: ")
 
     if name == "":
-        print_error_message(EROOR_NAME)
+        print_error_message(ERROR_NAME)
         if player_number == PLAYER_1:
             return DEFAULT_NAME_1
         return DEFAULT_NAME_2
-
-    return name
-
 def get_menu_choice():
      while true
         print_menu()
